@@ -44774,7 +44774,7 @@ var VideoModule = /*#__PURE__*/function (_Component) {
       }, gameAllData.map(function (data, index) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("tr", {
           key: index
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.局數), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.投手), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.打者), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球種), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球速), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.揮棒), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.結果));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.局數), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.打者), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.投手), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球種), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球速), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.揮棒), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.結果));
       })))))));
     }
   }]);

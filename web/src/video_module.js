@@ -101,8 +101,8 @@ class VideoModule extends Component {
                                     {gameAllData.map((data, index) => (
                                         <tr key={index}>
                                             <td>{data.局數}</td>
-                                            <td>{data.投手}</td>
                                             <td>{data.打者}</td>
+                                            <td>{data.投手}</td>
                                             <td>{data.球種}</td>
                                             <td>{data.球速}</td>
                                             <td>{data.揮棒}</td>
