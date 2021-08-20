@@ -32,7 +32,7 @@ class VideoModule extends Component {
 
     // Post Data
     async PostData(someData) {
-        const dataApiUrl = ("Parameter");
+        const dataApiUrl = ("/parameter");
         const res = await axios.post(dataApiUrl, { 'someData': someData });
         const data = res.data;
         console.log(data)
