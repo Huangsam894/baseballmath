@@ -44619,16 +44619,51 @@ var VideoModule = /*#__PURE__*/function (_Component) {
       }
 
       return getGameAllData;
+    }() // Post Data
+
+  }, {
+    key: "PostData",
+    value: function () {
+      var _PostData = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(someData) {
+        var dataApiUrl, res, data;
+        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                dataApiUrl = "Parameter";
+                _context2.next = 3;
+                return axios__WEBPACK_IMPORTED_MODULE_16___default().post(dataApiUrl, {
+                  'someData': someData
+                });
+
+              case 3:
+                res = _context2.sent;
+                data = res.data;
+                console.log(data);
+
+              case 6:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      function PostData(_x2) {
+        return _PostData.apply(this, arguments);
+      }
+
+      return PostData;
     }() // Get Select Options
 
   }, {
     key: "getSelectOptions",
     value: function () {
-      var _getSelectOptions = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+      var _getSelectOptions = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
         var options;
-        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        return regeneratorRuntime.wrap(function _callee3$(_context3) {
           while (1) {
-            switch (_context2.prev = _context2.next) {
+            switch (_context3.prev = _context3.next) {
               case 0:
                 options = [{
                   value: '0',
@@ -44643,10 +44678,10 @@ var VideoModule = /*#__PURE__*/function (_Component) {
 
               case 2:
               case "end":
-                return _context2.stop();
+                return _context3.stop();
             }
           }
-        }, _callee2, this);
+        }, _callee3, this);
       }));
 
       function getSelectOptions() {
@@ -44659,14 +44694,15 @@ var VideoModule = /*#__PURE__*/function (_Component) {
   }, {
     key: "selectedHandleChange",
     value: function () {
-      var _selectedHandleChange = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(e) {
+      var _selectedHandleChange = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(e) {
         var selected, _selected;
 
-        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+        return regeneratorRuntime.wrap(function _callee4$(_context4) {
           while (1) {
-            switch (_context3.prev = _context3.next) {
+            switch (_context4.prev = _context4.next) {
               case 0:
                 this.getGameAllData(e.label);
+                this.PostData('123');
 
                 if (e.label == 'Guest') {
                   selected = "此選項編號: " + e.value + " 您選擇的是: 客隊";
@@ -44680,15 +44716,15 @@ var VideoModule = /*#__PURE__*/function (_Component) {
                   });
                 }
 
-              case 2:
+              case 3:
               case "end":
-                return _context3.stop();
+                return _context4.stop();
             }
           }
-        }, _callee3, this);
+        }, _callee4, this);
       }));
 
-      function selectedHandleChange(_x2) {
+      function selectedHandleChange(_x3) {
         return _selectedHandleChange.apply(this, arguments);
       }
 
@@ -44731,12 +44767,14 @@ var VideoModule = /*#__PURE__*/function (_Component) {
         scope: "col"
       }, "\u7403\u901F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("th", {
         scope: "col"
+      }, "\u63EE\u68D2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("th", {
+        scope: "col"
       }, "\u7D50\u679C"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("tbody", {
         className: "text-center"
       }, gameAllData.map(function (data, index) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("tr", {
           key: index
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.局數), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.投手), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.打者), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球種), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球速), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.結果));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.局數), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.投手), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.打者), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球種), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球速), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.揮棒), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.結果));
       })))))));
     }
   }]);
