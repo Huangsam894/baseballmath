@@ -54,7 +54,7 @@ def parameter_api():
     parameter = request.json
     print('Posted parameter :' , parameter)
 
-    # task = parameter
+    task = parameter
     return jsonify(task), 200
 
 if __name__ == '__main__':
