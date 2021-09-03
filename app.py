@@ -13,7 +13,7 @@ def index():
 def hello_api():
     return jsonify({'Hello': request.remote_addr}), 200
 
-@app.route('/data', methods=['POST'])
+@app.route('/data', methods=['POST','GET'])
 def data_para_api():
 
     teamType = request.json

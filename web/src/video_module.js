@@ -27,7 +27,7 @@ class VideoModule extends Component {
         const dataApiUrl = ("/data");
         const res = await axios.post(dataApiUrl, { 'teamType': teamType });
         const data = res.data;
-        this.setState({ gameAllData: data });
+        this.({ gameAllData: data });
     }
 
     // Post Data
