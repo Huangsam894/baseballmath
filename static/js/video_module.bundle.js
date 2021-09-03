@@ -3916,6 +3916,129 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./src/clock.jsx":
+/*!***********************!*\
+  !*** ./src/clock.jsx ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es6_object_set_prototype_of_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.object.set-prototype-of.js */ "./node_modules/core-js/modules/es6.object.set-prototype-of.js");
+/* harmony import */ var core_js_modules_es6_object_set_prototype_of_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_set_prototype_of_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_object_get_prototype_of_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.object.get-prototype-of.js */ "./node_modules/core-js/modules/es6.object.get-prototype-of.js");
+/* harmony import */ var core_js_modules_es6_object_get_prototype_of_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_get_prototype_of_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_reflect_construct_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.reflect.construct.js */ "./node_modules/core-js/modules/es6.reflect.construct.js");
+/* harmony import */ var core_js_modules_es6_reflect_construct_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_reflect_construct_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es6_object_create_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es6.object.create.js */ "./node_modules/core-js/modules/es6.object.create.js");
+/* harmony import */ var core_js_modules_es6_object_create_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_create_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es6_object_define_property_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es6.object.define-property.js */ "./node_modules/core-js/modules/es6.object.define-property.js");
+/* harmony import */ var core_js_modules_es6_object_define_property_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_define_property_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es6_symbol_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es6.symbol.js */ "./node_modules/core-js/modules/es6.symbol.js");
+/* harmony import */ var core_js_modules_es6_symbol_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_symbol_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es6_string_iterator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es6.string.iterator.js */ "./node_modules/core-js/modules/es6.string.iterator.js");
+/* harmony import */ var core_js_modules_es6_string_iterator_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_string_iterator_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es6_object_to_string_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es6.object.to-string.js */ "./node_modules/core-js/modules/es6.object.to-string.js");
+/* harmony import */ var core_js_modules_es6_object_to_string_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_to_string_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es6_array_iterator_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es6.array.iterator.js */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_web_dom_iterable_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom.iterable.js */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+
+
+
+
+
+
+
+
+
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Clock = /*#__PURE__*/function (_React$Component) {
+  _inherits(Clock, _React$Component);
+
+  var _super = _createSuper(Clock);
+
+  function Clock(props) {
+    var _this;
+
+    _classCallCheck(this, Clock);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      date: new Date()
+    };
+    return _this;
+  }
+
+  _createClass(Clock, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.timerID = setInterval(function () {
+        return _this2.tick();
+      }, 1000 //毫秒
+      );
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.timerID); //跑完後clear
+    }
+  }, {
+    key: "tick",
+    value: function tick() {
+      this.setState({
+        date: new Date()
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10__.createElement("h1", null, "Hello, world!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10__.createElement("h2", null, "It is ", this.state.date.toLocaleTimeString(), "."));
+    }
+  }]);
+
+  return Clock;
+}(react__WEBPACK_IMPORTED_MODULE_10__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Clock);
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/_a-function.js":
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/modules/_a-function.js ***!
@@ -44470,12 +44593,6 @@ var __webpack_exports__ = {};
   !*** ./src/video_module.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-=======
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
 /* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! regenerator-runtime/runtime.js */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es6_function_bind_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.function.bind.js */ "./node_modules/core-js/modules/es6.function.bind.js");
@@ -44506,10 +44623,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_iterable_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable_js__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-select */ "./node_modules/react-select/dist/react-select.esm.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _scss_video_module_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../scss/video_module.scss */ "./scss/video_module.scss");
+/* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react-select */ "./node_modules/react-select/dist/react-select.esm.js");
+/* harmony import */ var _clock_jsx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./clock.jsx */ "./src/clock.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _scss_video_module_scss__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../scss/video_module.scss */ "./scss/video_module.scss");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 
@@ -44558,6 +44676,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var VideoModule = /*#__PURE__*/function (_Component) {
   _inherits(VideoModule, _Component);
 
@@ -44573,12 +44692,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
       //
       selectOptions: [],
       gameAllData: [],
-<<<<<<< HEAD
-      selected: ""
-    }; //
-
-    _this.selectedHandleChange = _this.selectedHandleChange.bind(_assertThisInitialized(_this));
-=======
       selected: "",
       value: ""
     }; //
@@ -44586,7 +44699,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
     _this.selectedHandleChange = _this.selectedHandleChange.bind(_assertThisInitialized(_this));
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
     return _this;
   } // load view on start
 
@@ -44608,7 +44720,7 @@ var VideoModule = /*#__PURE__*/function (_Component) {
               case 0:
                 dataApiUrl = "/data";
                 _context.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_16___default().post(dataApiUrl, {
+                return axios__WEBPACK_IMPORTED_MODULE_17___default().post(dataApiUrl, {
                   'teamType': teamType
                 });
 
@@ -44632,62 +44744,16 @@ var VideoModule = /*#__PURE__*/function (_Component) {
       }
 
       return getGameAllData;
-<<<<<<< HEAD
-    }() // Post Data
-
-  }, {
-    key: "PostData",
-    value: function () {
-      var _PostData = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(someData) {
-        var dataApiUrl, res, data;
-        return regeneratorRuntime.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                dataApiUrl = "/parameter";
-                _context2.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_16___default().post(dataApiUrl, {
-                  'someData': someData
-                });
-
-              case 3:
-                res = _context2.sent;
-                data = res.data;
-                console.log(data);
-
-              case 6:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }));
-
-      function PostData(_x2) {
-        return _PostData.apply(this, arguments);
-      }
-
-      return PostData;
-=======
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
     }() // Get Select Options
 
   }, {
     key: "getSelectOptions",
     value: function () {
-<<<<<<< HEAD
-      var _getSelectOptions = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-        var options;
-        return regeneratorRuntime.wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-=======
       var _getSelectOptions = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
         var options, dataApiUrl, res;
         return regeneratorRuntime.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
               case 0:
                 options = [{
                   value: '0',
@@ -44699,18 +44765,9 @@ var VideoModule = /*#__PURE__*/function (_Component) {
                 this.setState({
                   selectOptions: options
                 });
-<<<<<<< HEAD
-
-              case 2:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3, this);
-=======
                 dataApiUrl = "https://karmazone-4a7ed-default-rtdb.asia-southeast1.firebasedatabase.app/.json";
                 _context2.next = 5;
-                return axios__WEBPACK_IMPORTED_MODULE_16___default().get(dataApiUrl);
+                return axios__WEBPACK_IMPORTED_MODULE_17___default().get(dataApiUrl);
 
               case 5:
                 res = _context2.sent;
@@ -44722,7 +44779,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
             }
           }
         }, _callee2, this);
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
       }));
 
       function getSelectOptions() {
@@ -44735,17 +44791,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
   }, {
     key: "selectedHandleChange",
     value: function () {
-<<<<<<< HEAD
-      var _selectedHandleChange = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(e) {
-        var selected, _selected;
-
-        return regeneratorRuntime.wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                this.getGameAllData(e.label);
-                this.PostData('123');
-=======
       var _selectedHandleChange = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(e) {
         var selected, _selected;
 
@@ -44754,7 +44799,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
             switch (_context3.prev = _context3.next) {
               case 0:
                 this.getGameAllData(e.label);
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
 
                 if (e.label == 'Guest') {
                   selected = "此選項編號: " + e.value + " 您選擇的是: 客隊";
@@ -44768,8 +44812,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
                   });
                 }
 
-<<<<<<< HEAD
-=======
               case 2:
               case "end":
                 return _context3.stop();
@@ -44798,7 +44840,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
                   selected: e.target.value
                 }); // this.setState({value: Number(e.target.value)+1});
 
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
               case 3:
               case "end":
                 return _context4.stop();
@@ -44807,13 +44848,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
         }, _callee4, this);
       }));
 
-<<<<<<< HEAD
-      function selectedHandleChange(_x3) {
-        return _selectedHandleChange.apply(this, arguments);
-      }
-
-      return selectedHandleChange;
-=======
       function handleChange(_x3) {
         return _handleChange.apply(this, arguments);
       }
@@ -44832,7 +44866,7 @@ var VideoModule = /*#__PURE__*/function (_Component) {
                 value = this.state.selected;
                 dataApiUrl = "/parameter";
                 _context5.next = 4;
-                return axios__WEBPACK_IMPORTED_MODULE_16___default().post(dataApiUrl, {
+                return axios__WEBPACK_IMPORTED_MODULE_17___default().post(dataApiUrl, {
                   'value': value
                 });
 
@@ -44857,7 +44891,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
       }
 
       return handleSubmit;
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
     }()
   }, {
     key: "render",
@@ -44872,20 +44905,12 @@ var VideoModule = /*#__PURE__*/function (_Component) {
         className: "row"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("div", {
         className: "col-4"
-<<<<<<< HEAD
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement(react_select__WEBPACK_IMPORTED_MODULE_18__.default, {
-=======
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement(Clock, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement(react_select__WEBPACK_IMPORTED_MODULE_18__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement(_clock_jsx__WEBPACK_IMPORTED_MODULE_16__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement(react_select__WEBPACK_IMPORTED_MODULE_19__.default, {
         className: "mb-2",
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
         placeholder: "\u9078\u64C7",
         options: selectOptions,
         onChange: this.selectedHandleChange
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("p", {
-<<<<<<< HEAD
-        className: "text-center"
-      }, selected)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("div", {
-=======
         className: "text-center mb-2"
       }, selected), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("form", {
         className: "form-group",
@@ -44900,7 +44925,6 @@ var VideoModule = /*#__PURE__*/function (_Component) {
         value: "\u9001\u51FA",
         className: "btn btn-primary form-control mb-2"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("div", {
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
         className: "col"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("table", {
         className: "table table-striped"
@@ -44918,82 +44942,19 @@ var VideoModule = /*#__PURE__*/function (_Component) {
         scope: "col"
       }, "\u7403\u901F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("th", {
         scope: "col"
-<<<<<<< HEAD
-      }, "\u63EE\u68D2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("th", {
-        scope: "col"
-=======
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
       }, "\u7D50\u679C"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("tbody", {
         className: "text-center"
       }, gameAllData.map(function (data, index) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("tr", {
           key: index
-<<<<<<< HEAD
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.局數), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.打者), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.投手), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球種), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球速), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.揮棒), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.結果));
-=======
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.局數), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.投手), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.打者), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球種), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.球速), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("td", null, data.結果));
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
       })))))));
     }
   }]);
 
   return VideoModule;
-<<<<<<< HEAD
-}(react__WEBPACK_IMPORTED_MODULE_14__.Component);
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VideoModule);
-=======
 }(react__WEBPACK_IMPORTED_MODULE_14__.Component); // export default VideoModule;
 
-
-var Clock = /*#__PURE__*/function (_React$Component) {
-  _inherits(Clock, _React$Component);
-
-  var _super2 = _createSuper(Clock);
-
-  function Clock(props) {
-    var _this2;
-
-    _classCallCheck(this, Clock);
-
-    _this2 = _super2.call(this, props);
-    _this2.state = {
-      date: new Date()
-    };
-    return _this2;
-  }
-
-  _createClass(Clock, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this3 = this;
-
-      this.timerID = setInterval(function () {
-        return _this3.tick();
-      }, 1000);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      clearInterval(this.timerID);
-    }
-  }, {
-    key: "tick",
-    value: function tick() {
-      this.setState({
-        date: new Date()
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("h1", null, "Hello, world!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement("h2", null, "It is ", this.state.date.toLocaleTimeString(), "."));
-    }
-  }]);
-
-  return Clock;
-}(react__WEBPACK_IMPORTED_MODULE_14__.Component);
->>>>>>> 52a590ed155830257f0a9d578b187500991dd385
 
 if (document.getElementById("video_module")) {
   react_dom__WEBPACK_IMPORTED_MODULE_15__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14__.createElement(VideoModule, null), document.getElementById("video_module"));

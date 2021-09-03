@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Select from 'react-select';
+import Clock from './clock.jsx';
 import axios from "axios";
 import css from "../scss/video_module.scss";
 
@@ -150,38 +151,7 @@ class VideoModule extends Component {
 }
 // export default VideoModule;
 
-class Clock extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {date: new Date()};
-    }
-  
-    componentDidMount() {
-      this.timerID = setInterval(
-        () => this.tick(),
-        1000
-      );
-    }
-  
-    componentWillUnmount() {
-      clearInterval(this.timerID);
-    }
-  
-    tick() {
-      this.setState({
-        date: new Date()
-      });
-    }
-  
-    render() {
-      return (
-        <div>
-          <h1>Hello, world!</h1>
-          <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-        </div>
-      );
-    }
-  }
+
 
 if (document.getElementById("video_module")) {
     ReactDOM.render(<VideoModule />, document.getElementById("video_module"));
