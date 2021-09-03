@@ -34,7 +34,7 @@ class Clock extends React.Component {
       this.setState( {E_Angle: res.data['Tianmu']['E_Angle']})
       this.setState( {E_Direct: res.data['Tianmu']['E_Direct']})
       this.setState( {E_Velo: res.data['Tianmu']['E_Velo']})
-      this.setState( {Velo_rel: res.data['Tianmu']['Velo_rel']})
+      this.setState( {Velo_rel: res.data['Tianmu']['Velo-rel']})
       console.log(res.data['Tianmu']['Date'])
         
     }
