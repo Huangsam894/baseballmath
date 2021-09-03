@@ -4012,7 +4012,8 @@ var Clock = /*#__PURE__*/function (_React$Component) {
       E_Angle: "",
       E_Direct: "",
       E_Velo: "",
-      Velo_rel: ""
+      Velo_rel: "",
+      state: ""
     };
     return _this;
   }
@@ -4062,9 +4063,20 @@ var Clock = /*#__PURE__*/function (_React$Component) {
                 this.setState({
                   Velo_rel: res.data['Tianmu']['Velo-rel']
                 });
+
+                if (res.data['Tianmu']['E_Angle'] == 0.0) {
+                  this.setState({
+                    state: '未出棒'
+                  });
+                } else {
+                  this.setState({
+                    state: '出棒'
+                  });
+                }
+
                 console.log(res.data['Tianmu']['Date']);
 
-              case 10:
+              case 11:
               case "end":
                 return _context.stop();
             }
@@ -4081,7 +4093,7 @@ var Clock = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("h1", null, "\u5929\u6BCD\u68D2\u7403\u5834\u5373\u6642\u6578\u64DA"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("li", null, "\u64CA\u7403\u4EF0\u89D2:", this.state.E_Angle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("li", null, "\u64CA\u7403\u65B9\u5411:", this.state.E_Direct), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("li", null, "\u64CA\u7403\u521D\u901F:", this.state.E_Velo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("li", null, "\u7403\u901F:", this.state.Velo_rel)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("h2", null, "It is ", this.state.date.toLocaleTimeString(), "."));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("h1", null, "\u5929\u6BCD\u68D2\u7403\u5834\u5373\u6642\u6578\u64DA"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("li", null, "\u64CA\u7403\u4EF0\u89D2:", this.state.E_Angle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("li", null, "\u64CA\u7403\u65B9\u5411:", this.state.E_Direct), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("li", null, "\u64CA\u7403\u521D\u901F:", this.state.E_Velo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("li", null, "\u7403\u901F:", this.state.Velo_rel), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("li", null, "\u51FA\u68D2\u5224\u65B7:", this.state.state)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12__.createElement("h2", null, "It is ", this.state.date.toLocaleTimeString(), "."));
     }
   }]);
 

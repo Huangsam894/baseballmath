@@ -10,6 +10,7 @@ class Clock extends React.Component {
           E_Direct: "",
           E_Velo: "",
           Velo_rel: "",
+          state: "",
         };
     }
   
@@ -35,6 +36,13 @@ class Clock extends React.Component {
       this.setState( {E_Direct: res.data['Tianmu']['E_Direct']})
       this.setState( {E_Velo: res.data['Tianmu']['E_Velo']})
       this.setState( {Velo_rel: res.data['Tianmu']['Velo-rel']})
+
+      if(res.data['Tianmu']['E_Angle']==0.0){
+          this.setState({state:('未出棒')})
+      }else{
+        this.setState({state:('出棒')})
+      }
+
       console.log(res.data['Tianmu']['Date'])
         
     }
@@ -48,6 +56,7 @@ class Clock extends React.Component {
               <li>擊球方向:{this.state.E_Direct}</li>
               <li>擊球初速:{this.state.E_Velo}</li>
               <li>球速:{this.state.Velo_rel}</li>
+              <li>出棒判斷:{this.state.state}</li>
           </ul>
           <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
         </div>
